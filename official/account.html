@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人中心 · 智多星</title>
+<link rel="stylesheet" href="styles.css?v=20260919h">
+<link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-mark-img" src="assets/logo-mark.svg" alt="">
+      <span class="brand-name">智多星</span>
+      <span class="brand-sub">AI 数字素养训练</span>
+    </a>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="index.html">返回首页</a>
+    </div>
+  </div>
+</nav>
+
+<div class="account-wrap">
+  <!-- 未登录：登录 / 注册 -->
+  <div class="auth-card" id="authCard">
+    <h1>会员账户</h1>
+    <p class="hint">登录后进入个人中心，可跳转智多星学习系统。</p>
+    <form class="auth-form" id="authForm">
+      <div class="field">
+        <label for="aPhone">手机号</label>
+        <input id="aPhone" type="tel" inputmode="numeric" required value="8888" placeholder="手机号（演示默认 8888）" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="aPass">密码</label>
+        <input id="aPass" type="password" required value="8888" placeholder="密码（演示默认 8888）" autocomplete="current-password">
+      </div>
+      <button class="btn btn-primary" type="submit" id="authSubmit">登录</button>
+      <button class="btn btn-ghost" type="button" id="switchAuth" style="width:100%">没有账号？立即注册</button>
+      <p class="form-msg" id="authMsg" role="status"></p>
+    </form>
+  </div>
+
+  <!-- 已登录：个人中心 -->
+  <div class="auth-card" id="profileCard" hidden>
+    <h1>个人中心</h1>
+    <p class="hint">欢迎回来，继续你的学习路线。</p>
+    <p class="lead-banner" id="leadBanner" hidden></p>
+    <div class="profile-row"><b>昵称</b><span id="pName">-</span></div>
+    <div class="profile-row"><b>联系方式</b><span id="pPhone">-</span></div>
+    <div class="profile-row"><b>会员状态</b><span id="pMember">演示会员</span></div>
+    <a class="btn btn-primary btn-lg learn-jump" id="learnJump" href="/learning/">进入智多星学习系统</a>
+    <p class="profile-note" id="learnNote">点击上方按钮进入同站点的智多星学习系统。</p>
+    <button class="btn btn-ghost" type="button" id="logoutBtn" style="margin-top:14px;width:100%">退出登录</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <p><img class="footer-logo" src="assets/logo-mark.svg" alt="">智多星 · AI 数字素养训练</p>
+  <p class="footer-sub">本页面为演示版本</p>
+</footer>
+
+<script src="account.js?v=20260919h"></script>
+</body>
+</html>

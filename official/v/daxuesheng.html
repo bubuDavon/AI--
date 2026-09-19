@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智多星 · 大学生 AI 核验路线</title>
+<meta name="description" content="4 周 10 课时：引文核验、阅读自查、真实简历与汇报练习。考核正文保留学员独立完成边界。">
+<link rel="stylesheet" href="../styles.css?v=20260919h">
+<link rel="icon" type="image/svg+xml" href="../assets/logo-icon.svg">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <img class="brand-mark-img" src="../assets/logo-mark.svg" alt="">
+      <span class="brand-name">智多星</span>
+      <span class="brand-sub">大学生路线</span>
+    </a>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="../index.html">主版（职场）</a>
+      <a class="btn btn-primary btn-sm" href="/learning/">进入学习</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">分版落地页 · 大学生</p>
+      <h1>毕业前，学会<br>亲手核验每一条引用</h1>
+      <p class="hero-sub">4 周 10 课时：从提问边界到来源核验，再到真实简历与汇报练习。助教只给辅学与核验，考核正文由你独立完成。</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" type="button" id="heroChat">问助教适不适合我</button>
+        <a class="btn btn-ghost" href="#lead">留联系方式领大纲</a>
+      </div>
+      <ul class="fact-row">
+        <li><b>10</b><span>课时 · 每课 50 分钟</span></li>
+        <li><b>5</b><span>题平行核验测评</span></li>
+        <li><b>72</b><span>张知识卡支撑</span></li>
+      </ul>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="mock-card mock-a">
+        <p class="mock-tag">本课任务</p>
+        <p class="mock-title">核对一条引文的三项元数据</p>
+        <p class="mock-line">作者 / 标题 / 年份 / 出版页位置，逐项对照</p>
+        <div class="mock-steps">
+          <span>① 拆主张</span><span>② 找原始来源</span><span>③ 出对照表</span>
+        </div>
+      </div>
+      <div class="mock-card mock-b">
+        <p class="mock-tag">助教反馈</p>
+        <p class="mock-line">单库未命中 ≠ 虚假，已标注"当前未核实" ✔</p>
+        <p class="mock-line">下一步：补第二库或馆藏检索证据</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="work">
+    <div class="section-head">
+      <p class="eyebrow">Curriculum</p>
+      <h2>三块核心能力</h2>
+    </div>
+    <div class="grid-3">
+      <article class="card">
+        <p class="card-no">01</p>
+        <h3>引文核验</h3>
+        <p>出版页位置 + 三项元数据对照，解释证据是否足以支持结论。</p>
+        <p class="card-out">学完能做：对一条引文出具核验对照表</p>
+      </article>
+      <article class="card">
+        <p class="card-no">02</p>
+        <h3>阅读与自查</h3>
+        <p>摘要回原文、提纲自查，用可见证据说明改写依据。</p>
+        <p class="card-out">学完能做：交一份带原文出处的阅读摘要</p>
+      </article>
+      <article class="card">
+        <p class="card-no">03</p>
+        <h3>简历与汇报</h3>
+        <p>真实简历逐句说明经历依据，模拟面试与汇报大纲。</p>
+        <p class="card-out">学完能做：逐句标注依据的一份真实简历</p>
+      </article>
+    </div>
+    <ol class="route-strip" aria-label="十课时路线">
+      <li>边界与提问</li><li>来源核验</li><li>引文对照</li><li>阅读自查</li><li>简历练习</li><li>平行测评</li>
+    </ol>
+  </section>
+
+  <section class="section section-alt" id="lead">
+    <div class="section-head">
+      <p class="eyebrow">Get Started</p>
+      <h2>留个联系方式，领大学生路线大纲</h2>
+    </div>
+    <form class="lead-form" id="leadForm" novalidate>
+      <div class="field">
+        <label for="fContactType">联系方式类型</label>
+        <select id="fContactType" name="contactType">
+          <option value="phone">手机号</option>
+          <option value="email">邮箱</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fContact">联系方式<span class="req-tag">必填</span></label>
+        <input id="fContact" name="contact" type="text" required inputmode="numeric" autocomplete="tel" placeholder="11 位手机号，以 1 开头">
+      </div>
+      <div class="field">
+        <label for="fName">称呼<span class="opt-tag">选填</span></label>
+        <input id="fName" name="name" type="text" placeholder="怎么称呼你">
+      </div>
+      <div class="field">
+        <label for="fAudience">你的身份</label>
+        <select id="fAudience" name="audience">
+          <option value="大学生" selected>大学生</option>
+          <option value="职场">职场人</option>
+          <option value="零基础">零基础 / 中老年</option>
+          <option value="讲师">讲师 / 机构</option>
+        </select>
+      </div>
+      <div class="field field-wide">
+        <label for="fGoal">这次想解决什么<span class="opt-tag">选填</span></label>
+        <textarea id="fGoal" name="goal" rows="3" placeholder="例如：论文引用怕出错，想学核验"></textarea>
+      </div>
+      <div class="field field-wide">
+        <button class="btn btn-primary btn-lg" type="submit">提交，领取大纲</button>
+        <p class="form-msg" id="leadMsg" role="status"></p>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <p><img class="footer-logo" src="../assets/logo-mark.svg" alt="">智多星 · AI 数字素养训练</p>
+  <p class="footer-sub">本页面为演示版本 · 大学生分版</p>
+</footer>
+
+<div class="float-chat" id="floatChat">
+  <button class="float-btn" id="floatBtn" type="button" aria-expanded="false" aria-controls="floatPanel" title="在线咨询">
+    <img class="float-logo" src="../assets/logo-mark.svg" alt="">
+  </button>
+  <div class="float-panel" id="floatPanel" hidden>
+    <div class="float-head">
+      <p><b>智多星 · 在线咨询</b></p>
+      <button class="float-close" id="floatClose" type="button" aria-label="关闭">×</button>
+    </div>
+    <div class="chat-log" id="chatLog" aria-live="polite">
+      <div class="msg msg-ai"><p>你好，我是智多星。大学生路线相关问题（课时、核验方法、测评口径）都可以问我。</p></div>
+    </div>
+    <form class="chat-input" id="chatForm">
+      <label class="sr-only" for="chatText">咨询内容</label>
+      <input id="chatText" type="text" placeholder="想问什么？" autocomplete="off">
+      <button class="btn btn-primary" type="submit">发送</button>
+    </form>
+    <p class="chat-note">回复仅供参考；涉及评分、隐私或对外发送会转人工确认。</p>
+  </div>
+</div>
+
+<script src="../app.js?v=20260919h"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智多星 · 零基础体验路线</title>
+<meta name="description" content="3 小时体验：一次一个动作，保存第一份 AI 练习，隐私与反诈底线。需补课者走 20 课时扩展班。">
+<link rel="stylesheet" href="../styles.css?v=20260919h">
+<link rel="icon" type="image/svg+xml" href="../assets/logo-icon.svg">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <img class="brand-logo" src="../assets/logo-horizontal.svg" alt="智多星 · 零基础路线">
+    </a>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="../index.html">主版（职场）</a>
+      <a class="btn btn-primary btn-sm" href="/learning/">进入学习</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">分版落地页 · 零基础 / 中老年</p>
+      <h1>保存第一份 AI 练习，<br>从一个动作开始</h1>
+      <p class="hero-sub">一次只教一个动作，等你做完再下一步。3 小时体验课：会输入、会保存、会提问、识隐私、防诈骗。</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" type="button" id="heroChat">问助教从哪开始</button>
+        <a class="btn btn-ghost" href="#lead">留联系方式预约体验</a>
+      </div>
+      <ul class="fact-row">
+        <li><b>3</b><span>小时体验课</span></li>
+        <li><b>20</b><span>课时扩展班可选</span></li>
+        <li><b>1</b><span>次一个动作的节奏</span></li>
+      </ul>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="mock-card mock-a">
+        <p class="mock-tag">本课任务</p>
+        <p class="mock-title">创建并找回第一份练习文件</p>
+        <p class="mock-line">关闭之后还能重新打开，才算完成</p>
+        <div class="mock-steps">
+          <span>① 跟着做</span><span>② 自己再做</span><span>③ 说给我听</span>
+        </div>
+      </div>
+      <div class="mock-card mock-b">
+        <p class="mock-tag">助教反馈</p>
+        <p class="mock-line">文件找回成功 ✔ 密码和验证码只由你自己输入</p>
+        <p class="mock-line">下一步：学一句清楚的提问</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="work">
+    <div class="section-head">
+      <p class="eyebrow">Curriculum</p>
+      <h2>体验课三件事</h2>
+    </div>
+    <div class="grid-3">
+      <article class="card">
+        <p class="card-no">01</p>
+        <h3>输入与保存</h3>
+        <p>鼠标、打字、启动应用；创建练习文件，关闭后能找回打开。</p>
+        <p class="card-out">学完能做：独立保存并找回一份练习</p>
+      </article>
+      <article class="card">
+        <p class="card-no">02</p>
+        <h3>隐私与反诈</h3>
+        <p>密码验证码只由本人输入；识别索要验证码的诈骗话术。</p>
+        <p class="card-out">学完能做：说出三条不对外提供的信息</p>
+      </article>
+      <article class="card">
+        <p class="card-no">03</p>
+        <h3>清楚提问</h3>
+        <p>把"帮我整理一下"改成有目标、有材料、有验收条件的一句话。</p>
+        <p class="card-out">学完能做：写出一句带验收条件的提问</p>
+      </article>
+    </div>
+    <ol class="route-strip" aria-label="体验课路线">
+      <li>识别能力</li><li>输入与保存</li><li>隐私</li><li>清晰提问</li><li>生活文本</li><li>反诈</li>
+    </ol>
+  </section>
+
+  <section class="section section-alt" id="lead">
+    <div class="section-head">
+      <p class="eyebrow">Get Started</p>
+      <h2>留个联系方式，预约体验课</h2>
+    </div>
+    <form class="lead-form" id="leadForm" novalidate>
+      <div class="field">
+        <label for="fContactType">联系方式类型</label>
+        <select id="fContactType" name="contactType">
+          <option value="phone">手机号</option>
+          <option value="email">邮箱</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fContact">联系方式<span class="req-tag">必填</span></label>
+        <input id="fContact" name="contact" type="text" required inputmode="numeric" autocomplete="tel" placeholder="11 位手机号，以 1 开头">
+      </div>
+      <div class="field">
+        <label for="fName">称呼<span class="opt-tag">选填</span></label>
+        <input id="fName" name="name" type="text" placeholder="怎么称呼你">
+      </div>
+      <div class="field">
+        <label for="fAudience">你的身份</label>
+        <select id="fAudience" name="audience">
+          <option value="零基础" selected>零基础 / 中老年</option>
+          <option value="职场">职场人</option>
+          <option value="大学生">大学生</option>
+          <option value="讲师">讲师 / 机构</option>
+        </select>
+      </div>
+      <div class="field field-wide">
+        <label for="fGoal">这次想学会什么<span class="opt-tag">选填</span></label>
+        <textarea id="fGoal" name="goal" rows="3" placeholder="例如：想学会用手机问 AI 生活问题"></textarea>
+      </div>
+      <div class="field field-wide">
+        <button class="btn btn-primary btn-lg" type="submit">提交，预约体验</button>
+        <p class="form-msg" id="leadMsg" role="status"></p>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <p><img class="footer-logo" src="../assets/logo-icon.svg" alt="">智多星 · AI 数字素养训练</p>
+  <p class="footer-sub">本页面为演示版本 · 零基础分版</p>
+</footer>
+
+<div class="float-chat" id="floatChat">
+  <button class="float-btn" id="floatBtn" type="button" aria-expanded="false" aria-controls="floatPanel" title="在线咨询">
+    <img class="float-logo" src="../assets/logo-icon.svg" alt="">
+  </button>
+  <div class="float-panel" id="floatPanel" hidden>
+    <div class="float-head">
+      <p><b>智多星 · 在线咨询</b></p>
+      <button class="float-close" id="floatClose" type="button" aria-label="关闭">×</button>
+    </div>
+    <div class="chat-log" id="chatLog" aria-live="polite">
+      <div class="msg msg-ai"><p>你好，我是智多星。零基础体验课的问题（节奏、设备要求、扩展班）都可以问我。</p></div>
+    </div>
+    <form class="chat-input" id="chatForm">
+      <label class="sr-only" for="chatText">咨询内容</label>
+      <input id="chatText" type="text" placeholder="想问什么？" autocomplete="off">
+      <button class="btn btn-primary" type="submit">发送</button>
+    </form>
+    <p class="chat-note">回复仅供参考；涉及评分、隐私或对外发送会转人工确认。</p>
+  </div>
+</div>
+
+<script src="../app.js?v=20260919h"></script>
+</body>
+</html>

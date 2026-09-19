@@ -21,3 +21,54 @@ const LESSONS=[
 {title:'最后表达：把要求和边界说清楚',time:'约 5 分钟',cards:['C01','C03','B10'],task:'写一条提示词：说明对象、任务、可用材料、输出形式和不确定性标记。不要上传不必要的个人信息。',q:'这次练习允许 AI 帮你做什么？',o:['替你编一条证据，完成提交','指出记录的缺口，由你查证并修改'],a:1,why:'让 AI 辅助发现问题，事实和证据仍由你核对，使用方式也应披露。'}];
 const MATERIAL_A='对于AI生成的引用，需核对题名、作者、年份与原始出处；语气坚定、格式完整都不是可靠证据。';
 const PRACTICE_CLAIM='《AI入门学习手册》建议：只要AI给出作者与年份，就不需要核对原始出处。';
+
+const PRACTICE_TASKS={
+ verification:{
+  title:'核验一条 AI 引用并留下证据',
+  brief:'一份 AI 摘要声称：“只要列出作者和年份，就不需要核对原始出处。”请根据给定材料完成判断，并上传你的核验记录。',
+  deliverable:'核验记录、标注截图或文档（PDF、图片、Word、TXT、Markdown）',
+  materials:[
+   ['材料 A · 模拟手册原文','对于 AI 生成的引用，需核对题名、作者、年份与原始出处；语气坚定、格式完整都不是可靠证据。'],
+   ['材料 B · 模拟检索记录','只在一个数据库中使用书名检索，暂未命中；尚未尝试替代关键词。'],
+   ['材料 C · AI 再次确认','“我确认之前的说法是对的。”但没有给出任何原始出处。']
+  ],
+  questions:[
+   {name:'evidenceChoice',label:'哪一份材料能直接判断这条主张？',options:[['A','材料 A · 模拟手册原文'],['B','材料 B · 模拟检索记录'],['C','材料 C · AI 再次确认']],answer:'A'},
+   {name:'verdictChoice',label:'根据材料，你的判断是什么？',options:[['conflict','主张与原文冲突'],['unknown','现有材料完全无法判断'],['supported','主张得到原文支持']],answer:'conflict'},
+   {name:'actionChoice',label:'下一步最合适的做法是？',options:[['revise','按原文修正主张，记录出处与适用范围'],['repeat','继续让同一个 AI 确认'],['publish','直接采用这条主张']],answer:'revise'}
+  ],
+  workPrompt:'写下你实际完成的核验步骤、证据摘录和结论（至少 40 字）。'
+ },
+ prompting:{
+  title:'把模糊需求改造成可执行任务',
+  brief:'同事只说“帮我做个好的汇报”。请把它改造成一个可执行、可验收且标明信息边界的任务，并上传你整理后的提示词或任务清单。',
+  deliverable:'提示词、任务清单或操作截图（PDF、图片、Word、TXT、Markdown）',
+  materials:[
+   ['任务背景','面向新同事做 5 分钟介绍，材料是已经脱敏的项目摘要。'],
+   ['交付要求','输出 3 点提纲，每点附材料依据，并把不确定内容标为“待核实”。'],
+   ['使用边界','不补写材料中没有的数字、客户名称或项目成果。']
+  ],
+  questions:[
+   {name:'evidenceChoice',label:'开始前最需要补充什么？',options:[['A','对象、时长、材料和交付格式'],['B','更多夸奖 AI 的语句'],['C','让 AI 自由发挥']],answer:'A'},
+   {name:'verdictChoice',label:'遇到材料中没有的数字时应该？',options:[['conflict','标为待核实，不自行补写'],['unknown','编一个合理区间'],['supported','删除所有依据']],answer:'conflict'},
+   {name:'actionChoice',label:'哪种成果最容易验收？',options:[['revise','3 点提纲，每点有依据和待核实标记'],['repeat','一篇不限长度的流畅文章'],['publish','只写“汇报已完成”']],answer:'revise'}
+  ],
+  workPrompt:'写出你实际整理的任务说明或提示词，并说明如何验收结果（至少 40 字）。'
+ },
+ privacy:{
+  title:'安全整理一份待上传材料',
+  brief:'你需要让 AI 帮忙整理一份包含姓名、学号和身份证号的表格。请先决定最小必要信息，完成脱敏方案，并上传处理后的示例或操作记录。',
+  deliverable:'脱敏后的示例、字段清单或操作截图（PDF、图片、Word、TXT、Markdown）',
+  materials:[
+   ['任务目标','只统计不同专业的人数，不需要识别任何个人。'],
+   ['原始字段','姓名、学号、身份证号、专业、联系方式。'],
+   ['安全要求','不上传完成任务不需要的个人信息；保留未修改的原文件副本。']
+  ],
+  questions:[
+   {name:'evidenceChoice',label:'完成统计真正需要保留哪个字段？',options:[['A','专业'],['B','身份证号'],['C','姓名和联系方式']],answer:'A'},
+   {name:'verdictChoice',label:'把姓名换成学号后能直接上传吗？',options:[['conflict','不能，学号仍可能识别个人'],['unknown','能，学号一定匿名'],['supported','只要改文件名就能上传']],answer:'conflict'},
+   {name:'actionChoice',label:'最合适的处理顺序是？',options:[['revise','复制文件、删除非必要字段、检查后再上传'],['repeat','先上传再询问是否安全'],['publish','覆盖原文件后直接上传']],answer:'revise'}
+  ],
+  workPrompt:'写下你实际执行的脱敏步骤、保留字段和检查结果（至少 40 字）。'
+ }
+};

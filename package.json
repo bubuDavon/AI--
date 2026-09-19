@@ -1,0 +1,19 @@
+{
+  "name": "zhiduoxing-learning-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "智多星 AI 学习工作台与 OpenHex 知识助教",
+  "scripts": {
+    "build": "node scripts/build-static.mjs",
+    "start": "npm run build && node server.mjs",
+    "dev": "npm run build && node --watch server.mjs",
+    "check": "node --check server.mjs && node --check app.js && node --check official/app.js && node --check official/account.js && node --check netlify/lib/openhex.mjs && node --check netlify/official/openhex-consult.mjs && node --check netlify/functions/official-app.mjs && node --check netlify/functions/openhex-status.mjs && node --check netlify/functions/openhex-chat.mjs && node --check scripts/build-static.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@openhex-ai/agent-sdk": "^0.5.1"
+  }
+}
